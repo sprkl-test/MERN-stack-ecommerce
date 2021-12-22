@@ -1,3 +1,4 @@
+require('@sprkl/gitelemetry').init('MERN-stack-ecommerce');
 require('dotenv').config({ path: __dirname + '/.env' });
 const express = require('express');
 const path = require('path');
