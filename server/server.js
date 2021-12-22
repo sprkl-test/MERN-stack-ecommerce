@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 const userRouter = require('./routes/userRouter');
 const productRouter = require('./routes/productRouter');
 const orderRouter = require('./routes/orderRouter');
+const Product = require('./models/productModel');
+const data = require('./seeds/seed');
 const app = express();
 
 //db connect 
@@ -13,6 +15,8 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mern_ecommerce'
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
+}).then(async() => {
+    await Product.insertMany(data.products);
 });
 
 const PORT = process.env.PORT || 8080;
