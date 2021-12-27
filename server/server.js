@@ -12,7 +12,11 @@ const app = express();
 
 //db connect 
 // console.log(process.env.MONGODB_URI );
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mern_ecommerce', {
+let mongoUrl = 'mongodb://localhost/mern_ecommerce';
+if (process.env.MONGODB) {
+    mongoUrl = `mongodb://${process.env.MONGODB}/mern_ecommerce`;
+}
+mongoose.connect(mongoUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
