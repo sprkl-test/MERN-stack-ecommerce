@@ -8,7 +8,7 @@
     "start:server": "node server/server.js",
     "start:client": "cd client && npm start",
     "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
-    "prestart": "gitelemetry apply -a 1000",
+    "prestart": "sprkl apply -a 1000",
     "install": "cd client && npm i",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build",

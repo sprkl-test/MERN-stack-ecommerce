@@ -1,4 +1,4 @@
-require('@sprkl/gitelemetry').init('MERN-stack-ecommerce');
+require('@sprkl/sprkl').init('MERN-stack-ecommerce');
 require('dotenv').config({ path: __dirname + '/.env' });
 const express = require('express');
 const path = require('path');
@@ -10,7 +10,7 @@ const Product = require('./models/productModel');
 const data = require('./seeds/seed');
 const app = express();
 
-//db connect 
+//db connect
 // console.log(process.env.MONGODB_URI );
 let mongoUrl = 'mongodb://localhost/mern_ecommerce';
 if (process.env.MONGODB) {
@@ -57,7 +57,7 @@ app.use((err, req, res, next) => {
     res.status(500).send({message: err.message});
 });
 
-//server 
+//server
 app.listen(PORT, () => {
     console.log(`listening on PORT ${PORT}. http://localhost:${PORT}`);
 });
