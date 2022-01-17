@@ -1,4 +1,4 @@
-require('@sprkl/sprkl').init('MERN-stack-ecommerce');
+require('@sprkl').init('MERN-stack-ecommerce');
 require('dotenv').config({ path: __dirname + '/.env' });
 const express = require('express');
 const path = require('path');
