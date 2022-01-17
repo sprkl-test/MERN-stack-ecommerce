@@ -12,7 +12,7 @@ COPY client/yarn.lock client/yarn.lock
 
 RUN npm install
 
-RUN npm link @sprkl/sprkl
+RUN npm link sprkl
 
 COPY . .
 
