@@ -1,4 +1,4 @@
-require('sprkl').init({serviceName: 'MERN-stack-ecommerce', agent: {host: process.env.OTEL_COLLECTOR}});
+require('@sprkl/sprkl').init({serviceName: 'MERN-stack-ecommerce', agent: {host: process.env.OTEL_COLLECTOR}});
 require('dotenv').config({ path: __dirname + '/.env' });
 const express = require('express');
 const path = require('path');
